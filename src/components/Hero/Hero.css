@@ -1,0 +1,84 @@
+.hero {
+  position: relative;
+  height: calc(100vh - 72px); /* navbar height */
+  background: linear-gradient(135deg, #020617, #042f2e);
+  overflow: hidden;
+}
+
+/* 🔹 TEXT ABOVE CENTER */
+.hero-text {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+/* 🔥 CENTER BUTTON (PERFECT CENTER) */
+.start-ai-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 16px 44px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  color: #000;
+
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.start-ai-btn:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 0 45px rgba(34, 211, 238, 0.9);
+}
+
+/* 🔹 FEATURES BELOW BUTTON */
+.hero-features {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 32px;
+}
+
+/* FEATURE CARD */
+.feature-card {
+  width: 260px;
+  padding: 26px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  opacity: 0.8;
+}

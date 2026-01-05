@@ -1,0 +1,26 @@
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 80px 24px;
+  background: linear-gradient(135deg, #020617, #042f2e);
+}
+
+.feature-card {
+  width: 260px;
+  padding: 28px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  opacity: 0.8;
+}

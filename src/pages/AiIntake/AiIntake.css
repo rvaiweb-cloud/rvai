@@ -1,0 +1,385 @@
+/* ===== MAIN LAYOUT ===== */
+.ai-layout {
+  display: flex;
+  height: 100vh;
+  background: radial-gradient(circle at top, #0f3a44, #071a20);
+  color: white;
+}
+
+/* ===== SIDEBAR ===== */
+.ai-sidebar {
+  width: 260px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0,0,0,0.2);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+}
+
+.logo-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  /* IMPORTANT: no spacing */
+  gap: 0;
+}
+
+/* RV - smaller */
+.logo-rv {
+  font-size: 12px;
+  font-weight: 700 !important;
+  color: #00151a;
+  letter-spacing: -0.5px; /* tighten */
+}
+
+/* AI - bigger & bold */
+.logo-ai {
+  font-size: 18px;
+  font-weight: 800;
+  color: #00151a;
+  letter-spacing: -0.5px; /* tighten */
+}
+
+.sidebar-group {
+  margin-bottom: 20px;
+}
+
+.sidebar-item {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+  background: rgba(255,255,255,0.12);
+  opacity: 1;
+}
+
+.sidebar-item.muted {
+  opacity: 0.6;
+}
+
+.sidebar-section-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  opacity: 0.5;
+  margin: 12px 0 6px;
+}
+
+.badge {
+  margin-left: auto;
+  background: #22d3ee;
+  color: #00151a;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  background: #22d3ee;
+  color: #00151a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* ===== RIGHT SIDE ===== */
+.ai-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-topbar {
+  height: 60px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.2);
+}
+
+.ai-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== INTAKE BOX ===== */
+.ai-intake-box {
+  width: 100%;
+  max-width: 820px;
+  padding: 60px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  text-align: center;
+}
+
+.ai-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.ai-subtitle {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* ===== INPUT ===== */
+.ai-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.ai-input {
+  width: 100%;
+  height: 140px;
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  resize: none;
+}
+
+.ai-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ===== INPUT ACTIONS ===== */
+.ai-input-actions {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+/* ===== STEPS ===== */
+.ai-steps {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ai-step {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ai-step.completed {
+  color: #22d3ee;
+}
+
+.ai-step.pending {
+  color: rgba(255,255,255,0.45);
+}
+
+
+/* ===== FILE CHIPS INSIDE INPUT ===== */
+/* ===== INPUT BOX STRUCTURE ===== */
+.ai-input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ai-input-inner {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px;                 /* slightly more breathing space */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 900px;              /* 🔥 INCREASED */
+}
+
+
+/* FILE CHIPS INSIDE INPUT */
+.file-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.file-chip {
+  background: rgba(34, 211, 238, 0.18);
+  color: #22d3ee;
+  padding: 6px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.file-chip span {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.file-chip span:hover {
+  opacity: 1;
+}
+
+/* TEXTAREA */
+.ai-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  resize: none;
+  min-height: 120px;
+  line-height: 1.6;
+  
+}
+
+/* ACTIONS INSIDE INPUT */
+.ai-input-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ICON BUTTONS */
+.icon-btn {
+  background: rgba(255,255,255,0.12);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.icon-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* START BUTTON */
+.start-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  border: none;
+  color: #00151a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================================
+   FULL HEIGHT SPLIT WORKSPACE
+================================ */
+
+/* Main content takes full height below navbar */
+.ai-content {
+    padding: 24px 32px;
+    height: calc(100vh - 64px); /* navbar height */
+    box-sizing: border-box;
+}
+
+/* Two-column layout */
+.ai-split {
+    display: grid;
+    grid-template-columns: 0.9fr 1.9fr; /* wider preview */
+    gap: 32px;
+    height: 100%;
+}
+
+/* -------- LEFT : INPUT PANEL -------- */
+.ai-left {
+    height: 100%;
+    display: flex;
+}
+
+.ai-left .ai-intake-box {
+    width: 100%;
+    height: 100%;
+    padding: 56px 48px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 960px;
+}
+
+/* -------- RIGHT : WEBSITE PREVIEW -------- */
+.ai-right {
+    height: 100%;
+    background: #ffffff;
+    overflow: hidden;
+
+    /* remove top rounding so it touches navbar */
+    border-radius: 20px 20px 20px 20px;
+
+    /* subtle left separator */
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+
+/* iframe fills complete panel */
+.ai-preview-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+}
+
+/* Empty state before generation */
+.ai-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #8faab5;
+    background: #f4f7f9;
+}
+/* ===== REMOVE TOP GAP BELOW NAVBAR ===== */
+.ai-content {
+    padding-top: 0 !important;
+}

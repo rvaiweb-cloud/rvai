@@ -1,0 +1,84 @@
+.navbar {
+  height: 72px;
+  padding: 0 48px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  background: linear-gradient(90deg, #041c2c, #063b46);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* LEFT LOGO */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  /* IMPORTANT: no spacing */
+  gap: 0;
+}
+
+/* RV - smaller */
+.logo-rv {
+  font-size: 12px;
+  font-weight: 600;
+  color: #00151a;
+  letter-spacing: -0.5px; /* tighten */
+}
+
+/* AI - bigger & bold */
+.logo-ai {
+  font-size: 18px;
+  font-weight: 800;
+  color: #00151a;
+  letter-spacing: -0.5px; /* tighten */
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* CENTER ALL NAV ITEMS */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+/* LINKS */
+.nav-center a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.nav-center a:hover {
+  opacity: 1;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #22d3ee;
+  color: #000;
+  cursor: pointer;
+  font-weight: 600;
+}
