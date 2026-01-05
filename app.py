@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
+import ssl
+import os
 
 app = Flask(__name__)
 CORS(app)  # ✅ THIS IS REQUIRED
@@ -43,4 +45,5 @@ def generate():
     })
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    # Use Flask's built-in ad-hoc SSL certificate for development
+    app.run(host="0.0.0.0", port=5000, debug=True, ssl_context="adhoc")
